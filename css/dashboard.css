@@ -1,0 +1,1047 @@
+
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo{
+    display: flex;
+    gap: 0.8rem;
+}
+
+aside .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .close{
+    display: none;
+}
+
+
+/* =============== Sidebar =================  */
+
+aside .sidebar {
+    
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+aside h3{
+    font-weight: 500;
+}
+
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+/* =============== Sidebar uktimo ico =================  
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+}
+*/
+
+aside .sidebar a.active{
+    background: var(--color-light);
+    margin-left: 0;
+    color: var(--color-white)
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem -3px);
+}
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+aside .sidebar .message-count{
+    background:var(--color-danger) ;
+    color: var(--color-white);
+    padding: 4px 10px;
+    align-items: center;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+/* =============== MAIN =================  */
+
+main{
+    margin-top: 1.4rem;
+}
+
+main .date {
+    display: inline-block;
+    background: var(--color-light);
+    border-radius: var(--border-radius-1);
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+}
+
+main .date input[type='date']{
+    background: transparent;
+    color:var(--color-dark) ;
+}
+
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+}
+
+main .insights > div{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+main .insights > div:hover {
+    box-shadow: none;
+}
+
+main .insights > div span{
+    background: var(--color-success);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 2rem;
+}
+main .insights > div.income span{
+    background: var(--color-primary);
+}
+main .insights > div.pendentes span{
+    background: var(--color-warning);
+}
+
+main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main .insights svg{
+    width: 7rem;
+    height: 7rem;
+}
+
+main .insights svg circle{
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+main .insights .sales svg circle{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+main .insights .income svg circle{
+    stroke-dashoffset: 20;
+    stroke-dasharray: 80;
+}
+main .insights .pendentes svg circle{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+
+main .insights .progress .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .insights small{
+    margin-top: 1.3rem;
+    display: block;
+
+}
+ /* =============== Tabela de doações =================  */
+
+ main .recent-orders{
+    margin-top: 2rem;
+}
+
+main .recent-orders h2{
+    margin-bottom: 0.8rem;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+main .recent-orders .most-mais{
+    margin-top: 0.8rem;
+    text-align: center;
+    color: var(--color-primary) !important;
+}
+
+main .recent-orders table{
+   background: var(--color-white);
+   width: 100%;
+   border-radius: var(--card-border-radius);
+   padding: var(--card-padding);
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   transition: all 300ms ease;
+}
+main .recent-orders table:hover{ 
+   box-shadow: none;
+}
+
+main table tbody td{
+   height: 2.8rem;
+   border-bottom: 1px solid var(--color-light);
+   color: var(--color-dark-variant);
+}
+main table td:last-child {
+   border: none;
+}
+main .recent-orders table a{
+   text-align: center;
+   display: inline-block;
+   margin: 1rem auto;
+   color: var(--color-primary);
+   transition: all 300ms ease;
+}
+main .recent-orders table a:hover{
+    color: var(--color-dark);
+}
+
+.max-table{
+    max-height: 70vh;
+    overflow: auto;
+}
+.max-table h2{
+    padding: 10px;
+}
+
+.borde-table{
+    box-shadow: var(--box-shadow);
+}
+
+/* Table Styles */
+
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid var(--color-background);
+    font-size: 12px;
+}
+
+.fl-table thead th {  
+    padding: 2rem;
+    
+}
+
+.fl-table thead{
+    background: var(--color-primary);
+    color: #fff;
+}
+
+
+.fl-table thead tr td:nth-child(odd) {
+    border: none;
+}
+
+/* Responsive dash */
+
+@media (max-width: 1200px) {
+    main .recent-orders table{
+        width: 70vw;
+    }
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: var(--color-white);
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table thead td a {
+        align-items: center;
+        display: block;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+ /* =============== lado direito  =================  */
+ 
+ main{
+     margin-top: 1.4rem;
+ }
+
+ main .top{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+ }
+
+ main .top button{
+     display: none;
+ }
+
+ main .theme-toggler{
+     background: #a7a7a7;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 1.6rem;
+     width: 4.2rem;
+     cursor: pointer;
+     border-radius: var(--border-radius-1);
+ }
+
+ main .theme-toggler span{
+     font-size: 1.2rem;
+     width: 50%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ main .theme-toggler span.active{
+     background: var(--color-primary);
+     color: white;
+     border-radius: var(--border-radius-1);
+ }
+
+ main .top .profile{
+     display: flex;
+     gap: 2rem;
+     text-align: right;
+ }
+
+/* =============== cadastrar doações =================  */
+.cadastro-doacao{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+}
+
+.cadastro-doacao > div{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    width: 100%;
+}
+.cadastro-doacao .bloco-doacoes h2{
+    margin-bottom: 0.8rem;
+}
+
+.cadastro-doacao .bloco-doacoes{
+    align-items: center;
+
+}
+
+/* =============== Updates =================  */
+
+main .recent-updates{
+    margin-top: 1rem;
+}
+
+main .recent-updates h2{
+    margin-bottom: 0.8rem;
+}
+
+main .recent-updates .updates{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+main .recent-updates .updates:hover{
+    box-shadow: none;
+}
+
+main .recent-updates .updates .update{
+    display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+}
+/* =============== outras analises =================  */
+
+main .outras-analises{
+    margin-top: 2rem;
+}
+
+main .outras-analises h2{
+    margin-bottom: 0.8rem;
+}
+
+main .outras-analises .item{
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+main .outras-analises .item:hover{
+    box-shadow: none;
+}
+
+main .outras-analises .add-analise{
+    background-color: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .outras-analises .add-analise:hover{
+    background: var(--color-primary);
+    color: #fff;
+}
+
+main .outras-analises .add-analise div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+main .outras-analises .add-analise div h3{
+    font-weight: bold;
+}
+.container_dash{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 16rem auto;
+}
+
+/* =============== modal necessidades =================  */
+.modal-box{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    margin-top: 1rem;
+    transition: all 300ms ease;
+    display: flex;
+    max-width: 500px;
+    text-align: center;
+    flex-direction: column;
+    border-radius: var(--border-radius-1);
+}
+.modal-box h2{
+    margin: 14px;
+}
+
+
+.modal-necessidade {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    padding-top: 10%;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    justify-content: space-around;
+  }
+  
+  .modal-necessidade:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .fechar-necessidade {
+    position: absolute;
+    display: flex;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 5px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--color-white);
+    justify-content: center;
+  }
+
+
+/* =============== Necessidades ================*/
+
+.main-necessidades{
+    background: #ebebeb;
+    padding: var(--padding-1);
+    max-height: 100vh;
+    overflow: scroll;
+  }
+  
+  .main-necessidades h2{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin: 13px;
+  }
+  
+  .main-necessidades .card{
+    margin-bottom: 15px;
+    display: flex;
+    min-height: 500px;
+  }
+  
+  .main-necessidades .card .card-body {
+    display: grid;
+  }
+  
+  .main-necessidades .card .card-body img{
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: var(--border-radius-1);
+  }
+  
+  .main-necessidades .card .card-body h1{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .main-necessidades .card .card-body p{
+    text-align: center;
+  }
+  
+  .main-necessidades .card .card-body h2{
+    font-size: 1rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin: -15px;
+  }
+  
+  .card .card-body .detalhes-necessidades{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-evenly;
+  }
+  
+  
+  .card .card-body .btn-green{
+    min-width: 150px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+  }
+  
+  .card .card-body .card-detalhes{
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e1e1e1;
+    border-radius: var(--border-radius-1);
+  }
+  
+  .card .card-body  .span-necessidades{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-around;
+  }
+  
+
+.container_necesidade{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    
+}
+.necessidade_box{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    margin-bottom: 2rem;
+}
+.categoria_menu{
+    display: flex;
+    gap: 1rem;
+}
+
+.doacao_box{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    transition: all 300ms ease;
+    margin-bottom: 2rem;
+}
+
+ .doacao_box .text-doacao{
+     font-size: 2rem;
+ }
+
+ .doacao_box .text-doacao small{
+    font-size: 1.2rem;
+}
+
+.card_doacao {
+    background-color: var(--color-card-docao);
+    background-clip: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding: var(--card-padding);
+    margin: 10px 0;
+    border-radius: var(--border-radius-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_doacao img{
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+}
+.card-doacao-body {
+    flex: 1 1 auto;
+    padding: var(--card-padding);
+}
+
+.card-doacao-body p {
+    color: var(--color-dark);
+}
+.card-doacao-body h4{
+    font-size: 1.3rem;
+    color: var(--color-dark);
+}
+
+.card-doacao-body .card-text{
+    padding: 2rem 0;
+}
+
+.text-doacao h1{
+    color: var(--color-primary);
+    margin: 13px 0;
+}
+
+.text-doacao p{
+    font-size: 1rem;
+    margin: 13px 0;
+}
+/* =============== modal =================  */
+
+/* The Modal (background) */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 10%;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+  
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background: #fff;
+  }
+  
+  .fechar {
+    position: absolute;
+    display: flex;
+    width: 37px;
+    height: 37px;
+    right: 10%;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 5px;
+    background: var(--color-dark);
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--color-white);
+    justify-content: center;
+  }
+
+  .input-file-modal label {
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px 60px
+  }
+  .input-file-modal p{
+    font-size: 14px;
+      font-weight: 500;
+      color: #2e2e2e;
+  }
+  .input-file-modal label:hover {
+    background-color: #2980b9
+  }
+
+  .modal-btn{
+    padding: var(--card-padding);
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+
+  .btn-modal{
+    font-size: 0.8em;
+    color: var(--color-success);
+    border: 2px solid var(--color-success);
+    padding: 10px 100px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    justify-content: center;
+    width: 100%;
+    transition: all 500ms ease;
+  }
+  .btn-modal:hover{
+      color: var(--color-white);
+      background: var(--color-doar);
+      border: none;
+
+  }
+/* =============== responsivo =================  */
+
+@media screen and (max-width: 769px) {
+    .container_dash{
+        width: 94%;
+        grid-template-columns: 7rem auto ;
+    }
+    /* ===============       }=================  */
+        aside .logo h2 {
+        display: none;
+    }
+            main .recent-orders {
+        width: 100%;
+        position: relative;
+
+    }
+        main .recent-orders table{
+        width: 95vw;
+    }
+    
+    
+    main table thead 
+    {
+       float: left;
+    }
+
+    
+
+
+   aside .sidebar h3 { 
+   display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .insights {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) { 
+    .container_dash{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    
+    .banner h2 {
+        font-size: 2.8em;
+        color: var(--color-primary);
+      }
+      .banner p {
+        font-size: 1em;
+      }
+  
+      body{
+        overflow-x:hidden;
+      }
+
+    aside {
+        position: fixed;
+        left: -100%;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+        animation: showMenu  400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
+    }
+
+    main .recent-orders{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    aside .logo h2{
+        display: inline;
+        margin-left: 2rem;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3,4rem;
+    }
+
+    aside .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main {
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+
+    main{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    main .top{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: var(--color-white);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        justify-content: end;
+    }
+
+    main .top .theme-toggler{
+        width: 4.4rem;
+        position: absolute;
+        left: 45%;
+    }    
+
+    main .profile .info{
+        display: none;
+    }
+
+    main .top button{
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    main .top button span{
+        font-size: 2rem;
+        float: left;
+    }
+
+
+}
+
+
+/* ------- cadastro dashboard---------------- painel de lado direito --------- */
+
+::-webkit-scrollbar {
+    display: none;
+    }
+
+  .firt-division .input-field-rigth{
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    
+}
+   /* ------- cadastro dashboard---------------- painel de usuario --------- */
+.container-cadastro form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--color-success);
+    border-radius: 5px;
+    margin: 15px 0;
+    border: 2px solid var(--color-success);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+  
+
+/* ===============   =================  */
+/* ===============   =================  */
+/* ===============   =================  */
+/* ===============   =================  */
+
+
+
